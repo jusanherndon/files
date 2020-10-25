@@ -3,6 +3,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+so ~/.vim/autoload/plug.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -28,11 +29,15 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 "Third Party Plugins I found
-
-" Vim multiple cursors
-"Plug 'terryma/vim-multiple-cursors'
+call plug#begin('~/.vim/plugged')
 " Plugin for automatically surrounding words in brackets of any choice
-"Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
+"Fuzzy Search
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+" Vim multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+call plug#end()
 "Adds a file explorer
 Plugin 'preservim/nerdtree'
 "Adds ability to auto format files on saves
