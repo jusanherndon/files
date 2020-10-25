@@ -27,6 +27,20 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+"Third Party Plugins I found
+
+" Vim multiple cursors
+"Plug 'terryma/vim-multiple-cursors'
+" Plugin for automatically surrounding words in brackets of any choice
+"Plug 'tpope/vim-surround'
+"Adds a file explorer
+Plugin 'preservim/nerdtree'
+"Adds ability to auto format files on saves
+Plugin 'editorconfig/editorconfig-vim'
+" Adds the ability to add linters to vim
+Plugin 'dense-analysis/ale'
+" adds the ability to add git diff to side column
+Plugin 'airblade/vim-gitgutter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
