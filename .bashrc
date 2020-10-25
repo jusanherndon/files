@@ -121,8 +121,14 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
+# setup autocompletion
+if [ -f "/usr/share/bash-completion/completions/git" ]; then
+  source /usr/share/bash-completion/completions/git
+  else
+  echo "Error loading git completions"
+fi
+
 for file in ~/.linux_aliases/*.bashrc;
 do
  source ${file}
 done
-
